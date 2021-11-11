@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de contacto con ABD Control</title>
+    <link href="css/formulario.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/form.js" defer></script>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="form-contact">
+        <div class="form-container">
+            <h2>Formulario de contacto </h2>
+
+            <form method="post" id="formulario_contato" action="http://localhost/enviar-form/enviar.php" class="form">
+
+                <p class="name">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Su Nombre" />
+                </p>
+
+                <p class="email">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="mail@exemplo.com" />
+                </p>
+
+                <p class="telefono">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" id="telefono" placeholder="+58 0424 1234567" />
+                </p>
+
+                <p class="text">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" placeholder="Escriba un mensaje"></textarea>
+                </p>
+
+                <p class="submit">
+                    <!-- <input type="submit" onclick="validaForm()" value="Enviar" /> -->
+                    <input type="submit" value="Enviar" />
+                </p>
+            </form>
+        </div>
+
+        
+    </div>
+    <div class="modal" id="C1" data-animation="slideInOutLeft">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="title_mensaje"></h3>
+            </div>
+            <div class="mensaje_modal">
+
+                <div id="mostrarErrores"></div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnClose" class="close-modal" data-close>
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
